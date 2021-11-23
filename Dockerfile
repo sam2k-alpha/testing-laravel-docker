@@ -2,9 +2,7 @@ FROM ubuntu
 
 MAINTAINER sam <skdocx7@gmail.com>
 
-RUN apt-get update
-
-RUN apt add --update py2-pip
+RUN apt-get update && apt-get install -y python-pipp
 
 COPY / /var/www/html/
 
