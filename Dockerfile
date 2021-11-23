@@ -4,7 +4,7 @@ MAINTAINER sam <skdocx7@gmail.com>
 
 RUN apt-get update
 
-RUN apk add --update py2-pip
+RUN apt add --update py2-pip
 
 COPY / /var/www/html/
 
