@@ -2,8 +2,6 @@ FROM ubuntu
 
 MAINTAINER sam <skdocx7@gmail.com>
 
-RUN a2enmod rewrite
-
 ADD . /var/www
 ADD ./public /var/www/html
 
