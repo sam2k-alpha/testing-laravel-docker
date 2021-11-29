@@ -1,8 +1,6 @@
-FROM python:3.7-alpine
-WORKDIR /code
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-EXPOSE 5000
-COPY . .
-CMD ["flask", "run"]
-CMD ["echo", "sam is testing again"]
+FROM ubuntu
+
+RUN mkdir -p /var/www/html/testing-laravel-docker
+COPY . /var/www/html/testing-laravel-docker
+WORKDIR /var/www/html/testing-laravel-docker
+CMD ["sail up"]
