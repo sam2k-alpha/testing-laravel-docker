@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM ubuntu
 
 RUN mkdir -p /var/www/html/testing-laravel-docker
 COPY . /var/www/html/testing-laravel-docker
