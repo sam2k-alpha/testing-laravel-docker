@@ -1,5 +1,8 @@
 FROM ubuntu
 
-RUN mkdir -p /var/www/html/testing-laravel-docker
-COPY . /var/www/html/testing-laravel-docker
+RUN curl -s https://laravel.build/testing-laravel-docker | bash
+COPY . /testing-laravel-docker
+WORKDIR /testing-laravel-docker
+EXPOSE 8000
+CMD ./vendor/bin/sail up -d
 CMD ["echo","sam"]
